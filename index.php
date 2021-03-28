@@ -9,8 +9,6 @@
     //   echo "welcome to php course  Nti . .";    
 
 
-
-
      //  print 'welcome to php course . .';     
 
      #   print 'welcome to php course . .'; 
@@ -232,7 +230,7 @@
 
 // xor 
   //  0 xor 1  = 1
-  //  1 xor 0  = 1
+  //  1 xor 0  = 1    
   //  1 xor 1  = 0
   //  0 xor 0  = 0
 
@@ -577,12 +575,79 @@
     //  $_GET[]
 
 
-    ?>
+
+      //  echo 'index file ';
+
+      //  if(isset($_GET['errorMessage'])){
+      // echo   $_GET['errorMessage'];
+      //  }
+  // key => value
+
+    //  $studentArray = array('name' => 'omar','age' => 20,'level' => 4,'Gpa' => 3.5);  // [] 
+
+    //      echo   json_encode($studentArray);
+
+
+
+      //  $json_data =  '{"name":"omar","age":20,"level":4,"Gpa":3.5}';
+
+      //      $data =   json_decode($json_data,true);
+
+      //       echo $data['name'];
+           // echo $data->name;    
+
+
+        //   $file =  fopen('file.txt','r') or die('error in open file ');
+
+        //   // $student = json_encode(array('name' => 'omar','age' => 20,'level' => 4,'Gpa' => 3.5));
+
+        //   // if(fwrite($file,$student)){
+
+        //   //   echo 'Your data saved';
+      
+        //   // }else{
+        //   //   echo 'error in saving data ';
+        //   // }
+
+
+        // $data = json_decode(fread($file,filesize('file.txt')),true);
+          
+        //  foreach($data as $key => $t){
+        //    echo $key .' ||  '.$t.'<br>';
+        //  }
+
+
+
+        //   fclose($file);
 
 
 
 
-    
+
+
+
+
+            $text = "php laravel";
+
+            // $pattern = "*laravel*i";
+            
+            // echo preg_match($pattern,$text);
+
+        //  $pattern = "/a/i";
+
+        // echo  preg_match_all($pattern,$text);
+
+        $pattern = "/php/i";
+
+    echo     preg_replace($pattern,'js',$text);
+
+
+
+
+?>
+
+
+
 
 
 
