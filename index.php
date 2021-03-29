@@ -627,19 +627,19 @@
 
 
 
-            $text = "php laravel";
+    //         $text = "php laravel";
 
-            // $pattern = "*laravel*i";
+    //         // $pattern = "*laravel*i";
             
-            // echo preg_match($pattern,$text);
+    //         // echo preg_match($pattern,$text);
 
-        //  $pattern = "/a/i";
+    //     //  $pattern = "/a/i";
 
-        // echo  preg_match_all($pattern,$text);
+    //     // echo  preg_match_all($pattern,$text);
 
-        $pattern = "/php/i";
+    //     $pattern = "/php/i";
 
-    echo     preg_replace($pattern,'js',$text);
+    // echo     preg_replace($pattern,'js',$text);
 
 
 
