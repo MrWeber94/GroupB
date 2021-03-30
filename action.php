@@ -18,6 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   $email    = validation($_POST['email']);
   $password = md5(validation($_POST['password']));
   $address  = validation($_POST['address']);
+  $key = rand(10,100);
 
     // Validation { code }   true  . . . 
 
@@ -28,11 +29,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
          $Message = "input's length must be > 0"; 
 
        }else{
-         $query = "insert into users (name,password,email,address) values('$name','$password','$email','$address')";
+         $query = "insert into users (name,password,email,address,key2) values('$name','$password','$email','$address','$key')";
          // $query = "insert into users (name,password,email,address) values('".$name."','".$password."','".$email."','".$address."')";
      
      
-             $result =   mysqli_query($con,$query);
+             $result =   mysqli_query($con,$query);  // 
              if($result){
               $Message =  'data inserted ';
              }else{
@@ -61,7 +62,18 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 
 
+
+
+
+
+
    
+
+
+
+
+
+
 
 
 
