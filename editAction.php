@@ -17,6 +17,8 @@
        $email    = clean($_POST['email']);
        $address  = clean($_POST['address']);
        $id       = $_POST['id'];
+       $password = $_POST['password'];
+
 
      
          // Validation { code }   true  . . . 
@@ -31,7 +33,19 @@
 
            // logic . . . 
 
-         $sql = "update users set name='$name' , email = '$email' , address = '$address' where id = ".$id;
+
+         if(empty($password)){
+
+            $sql = "update users set name='$name' , email = '$email' , address = '$address' where id = ".$id;
+
+         }else{
+           $password = md5($password);
+
+            $sql = "update users set name='$name' ,password = '$password', email = '$email' , address = '$address' where id = ".$id;
+
+         }
+
+
           
           $op =  mysqli_query($con,$sql);
           $editMessage = '';

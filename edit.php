@@ -1,6 +1,8 @@
 <?php 
      require 'connection.php';
 
+    require 'checkLogin.php';
+
      $id =  filter_var($_GET['id'],FILTER_SANITIZE_NUMBER_INT); 
 
      $sql  = "select * from users where id = ".$id;
@@ -41,7 +43,7 @@
                  <input type="hidden" value="<?php echo $data['id'];?>" name="id">
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1"></label>
+                    <label for="exampleInputEmail1">Name</label>
                     <input type="text" name="name" value="<?php echo $data['name'];?>" class="form-control" id="exampleInputName" aria-describedby="" placeholder="Enter Name" required>
                 </div> 
     
@@ -50,10 +52,10 @@
                     <input type="email" name="email"  value="<?php echo $data['email'];?>"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
                 </div>
     
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="exampleInputPassword1">New Password</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                </div> -->
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" >
+                </div>
     
                 <div class="form-group">
                     <label for="exampleInputEmail1">Address</label>
@@ -67,3 +69,4 @@
     </body>
     
     </html>
+

@@ -2,7 +2,21 @@
 
         require 'connection.php';
 
-        $sql = "select * from users where id > 0";
+
+     if(isset($_SESSION['id'])){
+
+        // order by   col   desc asc
+        // id  asc , email desc
+
+        // limit  
+        // like
+
+       // top   >>> limit  
+
+
+
+        
+        $sql = "select * from users  order by id asc ";
 
         $op =  mysqli_query($con,$sql);   // object 
 
@@ -85,8 +99,11 @@
              <td>'.$data['name'].'</td>
              <td>'.$data['address'].'</td>
              <td>'.$data['email'].'</td>
-             <td><a href="delete.php?id='.$data['id'].'" class="btn btn-danger m-r-1em">Delete</a>
-             <a href="edit.php?id='.$data['id'].'" class="btn btn-primary m-r-1em">Edit</a> </td>
+             <td>';
+             if($_SESSION['id'] !== $data['id'] ){
+            echo  '<a href="delete.php?id='.$data['id'].'" class="btn btn-danger m-r-1em">Delete</a>';
+             }
+             echo '<a href="edit.php?id='.$data['id'].'" class="btn btn-primary m-r-1em">Edit</a> </td>
 
             </tr>';
 
@@ -123,3 +140,13 @@
 </body>
 
 </html>
+
+
+<?php }else{
+
+
+header('Location: login.php');
+
+
+
+}?>
