@@ -644,13 +644,11 @@
 
 
 
+  // user table    >>> name email password address gender 
 
-  //  form 
-  //  1-title
-  //  2-content
-  //  3-image
-  //  4-date
 
+  // registration login 
+  // after login >>>>> profile (id,name,email,address,gender)
 
 
 
